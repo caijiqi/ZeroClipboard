@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ZeroClipboard Demo</title>
+    <script src="jquery-2.1.4.min.js"></script>
+    <script src="jquery.zclip.min.js"></script>
+</head>
+<body>
+<button id="copyBtn">复制</button>
+<script>
+    $(document).ready(function(){
+        $("#copyBtn").zclip({
+            path:'ZeroClipboard.swf',
+            copy:function(){return 'test content'},
+            afterCopy:function(){alert('copy success');}
+        });
+    })
+
+</script>
+</body>
+</html>
